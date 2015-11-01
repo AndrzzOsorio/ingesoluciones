@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <FORM method=post action="cgi-bin/script.pl">
+        <FORM method=post action="Servlet">
 Editorial Univeso
 <TABLE BORDER=0>
 <TR>
@@ -172,31 +172,31 @@ Metalicos: <INPUT type=radio name="metalicos1" value="Si">
 	</TD>
         <TD>Perforado</TD>
 	<TD>
-	<INPUT type=text name="perforado">
+            <INPUT type=checkbox name="perforado" >
 	</TD>
 </TR>
 <TR>
 	<TD>Troquelado</TD>
 	<TD>
-	<INPUT type=text name="troquelado">
+	<INPUT type=radio name="troquelado" value="false">
 	</TD>
 
 	<TD>Grafado</TD>
 	<TD>
-	<INPUT type=text name="grafado">
+	<INPUT type=radio name="grafado" value="false">
 	</TD>
 
 	<TD>Plastificado</TD>
 	<TD>
-	<INPUT type=text name="plastificado">
+	<INPUT type=radio name="plastificado" value="false">
 	</TD>
         <TD>ParcialUV</TD>
 	<TD>
-	<INPUT type=text name="parcialuv">
+	<INPUT type=radio name="parcialuv" value="false">
 	</TD>
         <TD>Barnizado</TD>
 	<TD>
-	<INPUT type=text name="barnizado">
+	<INPUT type=radio name="barnizado" value="false">
 	</TD>
 </TR>
 <TR>
