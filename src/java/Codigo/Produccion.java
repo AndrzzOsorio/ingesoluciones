@@ -14,11 +14,11 @@ import java.util.LinkedList;
 public class Produccion {
     private String referencia;
     private int cantidad;
-    private boolean muestraimpresa;
+    private int muestraimpresa;
     private String maquina;
     private int numerodeplanchas;
-    private boolean metalicas;
-    private boolean electros;
+    private int metalicas;
+    private int electros;
     private OrdenTalonario talonario;
     private LinkedList<Material> material;
     private LinkedList<Montaje> montaje;
@@ -27,7 +27,7 @@ public class Produccion {
     public Produccion() {
     }
 
-    public Produccion(String referencia, int cantidad, boolean muestraimpresa, String maquina, int numerodeplanchas, boolean metalicas, boolean electros, OrdenTalonario talonario, LinkedList<Material> material, LinkedList<Montaje> montaje, LinkedList<Tinta> tinta) {
+    public Produccion(String referencia, int cantidad, int muestraimpresa, String maquina, int numerodeplanchas, int metalicas, int electros, OrdenTalonario talonario, LinkedList<Material> material, LinkedList<Montaje> montaje, LinkedList<Tinta> tinta) {
         this.referencia = referencia;
         this.cantidad = cantidad;
         this.muestraimpresa = muestraimpresa;
@@ -72,14 +72,14 @@ public class Produccion {
     /**
      * @return the muestraimpresa
      */
-    public boolean isMuestraimpresa() {
+    public int getMuestraimpresa() {
         return muestraimpresa;
     }
 
     /**
      * @param muestraimpresa the muestraimpresa to set
      */
-    public void setMuestraimpresa(boolean muestraimpresa) {
+    public void setMuestraimpresa(int muestraimpresa) {
         this.muestraimpresa = muestraimpresa;
     }
 
@@ -114,28 +114,28 @@ public class Produccion {
     /**
      * @return the metalicas
      */
-    public boolean isMetalicas() {
+    public int getMetalicas() {
         return metalicas;
     }
 
     /**
      * @param metalicas the metalicas to set
      */
-    public void setMetalicas(boolean metalicas) {
+    public void setMetalicas(int metalicas) {
         this.metalicas = metalicas;
     }
 
     /**
      * @return the electros
      */
-    public boolean isElectros() {
+    public int getElectros() {
         return electros;
     }
 
     /**
      * @param electros the electros to set
      */
-    public void setElectros(boolean electros) {
+    public void setElectros(int electros) {
         this.electros = electros;
     }
 
@@ -194,6 +194,8 @@ public class Produccion {
     public void setTinta(LinkedList<Tinta> tinta) {
         this.tinta = tinta;
     }
+    
+    
     
     
 }

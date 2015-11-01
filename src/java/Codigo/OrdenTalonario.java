@@ -14,17 +14,17 @@ public class OrdenTalonario {
     private int numerotalonarios;
     private int numeradodeinicio;
     private int numeradofin;
-    private boolean perforado;
-    private boolean troquelado;
-    private boolean grafado;
-    private boolean plastificado;
-    private boolean parcialuv;
-    private boolean barnizado;
+    private int perforado;
+    private int troquelado;
+    private int grafado;
+    private int plastificado;
+    private int parcialuv;
+    private int barnizado;
 
     public OrdenTalonario() {
     }
 
-    public OrdenTalonario(int numerotalonarios, int numeradodeinicio, int numeradofin, boolean perforado, boolean troquelado, boolean grafado, boolean plastificado, boolean parcialuv, boolean barnizado) {
+    public OrdenTalonario(int numerotalonarios, int numeradodeinicio, int numeradofin, int perforado, int troquelado, int grafado, int plastificado, int parcialuv, int barnizado) {
         this.numerotalonarios = numerotalonarios;
         this.numeradodeinicio = numeradodeinicio;
         this.numeradofin = numeradofin;
@@ -36,6 +36,7 @@ public class OrdenTalonario {
         this.barnizado = barnizado;
     }
 
+    
     /**
      * @return the numerotalonarios
      */
@@ -81,86 +82,88 @@ public class OrdenTalonario {
     /**
      * @return the perforado
      */
-    public boolean isPerforado() {
+    public int getPerforado() {
         return perforado;
     }
 
     /**
      * @param perforado the perforado to set
      */
-    public void setPerforado(boolean perforado) {
+    public void setPerforado(int perforado) {
         this.perforado = perforado;
     }
 
     /**
      * @return the troquelado
      */
-    public boolean isTroquelado() {
+    public int getTroquelado() {
         return troquelado;
     }
 
     /**
      * @param troquelado the troquelado to set
      */
-    public void setTroquelado(boolean troquelado) {
+    public void setTroquelado(int troquelado) {
         this.troquelado = troquelado;
     }
 
     /**
      * @return the grafado
      */
-    public boolean isGrafado() {
+    public int getGrafado() {
         return grafado;
     }
 
     /**
      * @param grafado the grafado to set
      */
-    public void setGrafado(boolean grafado) {
+    public void setGrafado(int grafado) {
         this.grafado = grafado;
     }
 
     /**
      * @return the plastificado
      */
-    public boolean isPlastificado() {
+    public int getPlastificado() {
         return plastificado;
     }
 
     /**
      * @param plastificado the plastificado to set
      */
-    public void setPlastificado(boolean plastificado) {
+    public void setPlastificado(int plastificado) {
         this.plastificado = plastificado;
     }
 
     /**
      * @return the parcialuv
      */
-    public boolean isParcialuv() {
+    public int getParcialuv() {
         return parcialuv;
     }
 
     /**
      * @param parcialuv the parcialuv to set
      */
-    public void setParcialuv(boolean parcialuv) {
+    public void setParcialuv(int parcialuv) {
         this.parcialuv = parcialuv;
     }
 
     /**
      * @return the barnizado
      */
-    public boolean isBarnizado() {
+    public int getBarnizado() {
         return barnizado;
     }
 
     /**
      * @param barnizado the barnizado to set
      */
-    public void setBarnizado(boolean barnizado) {
+    public void setBarnizado(int barnizado) {
         this.barnizado = barnizado;
     }
     
-    
+
 }
+
+ 

@@ -10,6 +10,7 @@ package Codigo;
  * @author 4NDR35
  */
 public class Cliente {
+    
     private String nombre;
     private int telefono;
     private int nit;

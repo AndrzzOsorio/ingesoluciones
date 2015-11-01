@@ -31,7 +31,7 @@ public class Servlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        OrdenTalonario ot = new OrdenTalonario(Integer.parseInt(request.getParameter("talonario")), Integer.parseInt(request.getParameter("del")), Integer.parseInt(request.getParameter("al")),Boolean.valueOf(request.getParameter("perforado")), true, true, true, true, true);
+        //OrdenTalonario ot = new OrdenTalonario(Integer.parseInt(request.getParameter("talonario")), Integer.parseInt(request.getParameter("del")), Integer.parseInt(request.getParameter("al")),Boolean.valueOf(request.getParameter("perforado")), true, true, true, true, true);
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -40,7 +40,7 @@ public class Servlet extends HttpServlet {
             out.println("<title>Servlet Servlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>"+ ot.isPerforado()+ "</h1>");
+            out.println("<h1>"+ "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
