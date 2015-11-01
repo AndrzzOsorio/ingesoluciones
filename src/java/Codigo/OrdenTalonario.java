@@ -20,11 +20,12 @@ public class OrdenTalonario {
     private int plastificado;
     private int parcialuv;
     private int barnizado;
+    private Tinta tinta;
 
     public OrdenTalonario() {
     }
 
-    public OrdenTalonario(int numerotalonarios, int numeradodeinicio, int numeradofin, int perforado, int troquelado, int grafado, int plastificado, int parcialuv, int barnizado) {
+    public OrdenTalonario(int numerotalonarios, int numeradodeinicio, int numeradofin,Tinta tinta, int perforado, int troquelado, int grafado, int plastificado, int parcialuv, int barnizado) {
         this.numerotalonarios = numerotalonarios;
         this.numeradodeinicio = numeradodeinicio;
         this.numeradofin = numeradofin;
@@ -34,6 +35,7 @@ public class OrdenTalonario {
         this.plastificado = plastificado;
         this.parcialuv = parcialuv;
         this.barnizado = barnizado;
+        this.tinta = tinta;
     }
 
     
@@ -161,6 +163,20 @@ public class OrdenTalonario {
      */
     public void setBarnizado(int barnizado) {
         this.barnizado = barnizado;
+    }
+
+    /**
+     * @return the tinta
+     */
+    public Tinta getTinta() {
+        return tinta;
+    }
+
+    /**
+     * @param tinta the tinta to set
+     */
+    public void setTinta(Tinta tinta) {
+        this.tinta = tinta;
     }
     
 

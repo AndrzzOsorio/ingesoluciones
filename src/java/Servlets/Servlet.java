@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Servlets;
+
 import Codigo.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -31,16 +32,24 @@ public class Servlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        OrdenTalonario ot = new OrdenTalonario(Integer.parseInt(request.getParameter("talonario")), Integer.parseInt(request.getParameter("del")), Integer.parseInt(request.getParameter("al")),Integer.parseInt(request.getParameter("perforado")), 0, 0, 0, 0, 0);
+        
+//   se crea el objeto talonario con lo aprametros que se ingresan 
+//   en el formulario con respecto a la seccion de talonario
+        
+        OrdenTalonario ot = new OrdenTalonario(Integer.parseInt(request.getParameter("talonario")), Integer.parseInt(request.getParameter("del")), Integer.parseInt(request.getParameter("al")),
+                new Tinta(request.getParameter("tinta")), conversion(request.getParameter("perforado")), conversion(request.getParameter("troquelado")), conversion(request.getParameter("grafado")),
+                conversion(request.getParameter("plastificado")), conversion(request.getParameter("parcialuv")), conversion(request.getParameter("barnizado")));
+        
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
+            out.println("<title>Servlet Servlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>"+ot.getNumeradodeinicio()+ "</h1>");
+            out.println("<h1>"+ "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -84,5 +93,14 @@ public class Servlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    public int conversion(String s) {
+        int x = 0;
+        if (s == null) {
+            return x = 0;
+        } else {
+            return x = 1;
+        }
+    }
 
 }

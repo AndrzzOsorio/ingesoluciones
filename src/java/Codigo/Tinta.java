@@ -16,8 +16,8 @@ public class Tinta {
     public Tinta() {
     }
 
-    public Tinta(int id, String nombre) {
-        this.id = id;
+    public Tinta(String nombre) {
+       
         this.nombre = nombre;
     }
 
