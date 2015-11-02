@@ -20,17 +20,35 @@ $(function()
 	$("#btn_tint").button().on("click", function(event)
     {
          
-	$("#divtint").append("<p>Tinta "+cont+"<INPUT type=text name='tin"+cont+"'></p>");
+	$("#divtint").append("<p class="+cont+">Tinta "+cont+"<INPUT type=text name='tin"+cont+"'></p>");
 	    $("#contadortin1").empty()
             $("#contadortin1").val(cont)
             cont++;
          
     });
     
+     $("#btn_tint_d").button().on("click", function(event)
+    {  
+        
+        cont--;
+        
+         $("#divtint ."+cont).remove();
+         if(cont <= 1){
+             cont=1; 
+             $("#contadortin1").empty()
+             $("#contadortin1").val(0)
+         }else{
+             $("#contadortin1").empty()
+             $("#contadortin1").val(cont-1)
+         }
+        
+         
+    });
+    
     	$("#btn_tint2").button().on("click", function(event)
     {
          
-	$("#divtint2").append("<p>Tinta "+cont1+"<INPUT type=text name='tin2"+cont1+"'></p>");
+	$("#divtint2").append("<p class="+cont1+">Tinta "+cont1+"<INPUT type=text name='tin2"+cont1+"'></p>");
             $("#contadortin2").empty()	 
             $("#contadortin2").val(cont1)
             cont1++;
@@ -38,25 +56,85 @@ $(function()
          
     });
     
+    $("#btn_tint2_d").button().on("click", function(event)
+    {    
+        cont1--;
+        
+         $("#divtint2 ."+cont1).remove();
+         if(cont1 <= 1){
+             cont1=1;
+             $("#contadortin2").empty()
+             $("#contadortin2").val(0)
+         }else{
+              $("#contadortin2").empty()
+              $("#contadortin2").val(cont1-1)
+         }
+             
+         
+         
+    });
+    
      	$("#btn_montaje").button().on("click", function(event)
     {
          
-	$("#divmontaje").append("<p>Montaje "+cont2+"<INPUT type=text name='montaje"+cont2+"'> Corte Inicial <INPUT type=text name='cinical"+cont2+"'></p>");
+	$("#divmontaje").append("<p class="+cont2+">Montaje "+cont2+"<INPUT type=text name='montaje"+cont2+"'> Corte Inicial <INPUT type=text name='cinical"+cont2+"'></p>");
 	    $("#contadormontaje").empty()
             $("#contadormontaje").val(cont2)
             cont2++;
          
     });
     
+         $("#btn_montaje_d").button().on("click", function(event)
+    {    
+        cont2--;
+        
+         $("#divmontaje ."+cont2).remove();
+         if(cont2 <= 1){
+             cont2=1;
+             $("#contadormontaje").empty()
+             $("#contadormontaje").val(0)
+         }else{
+              $("#contadormontaje").empty()
+             $("#contadormontaje").val(cont2-1)
+         }
+         
+         
+    });
+    
     $("#btn_material").button().on("click", function(event)
     {
          
-	$("#divmaterial").append("<p>Material "+cont3+"<INPUT type=text name='material"+cont3+"'> Numero de pliegos <INPUT type=text name='numpliegos"+cont3+"'></p>");
+	$("#divmaterial").append("<p class="+cont3+">Material "+cont3+"<INPUT type=text name='material"+cont3+"'> Numero de pliegos <INPUT type=text name='numpliegos"+cont3+"'></p>");
 	   $("#contadormaterial").empty()
            $("#contadormaterial").val(cont3)
            cont3++;
+           
+           
          
     });
+    
+   
+    
+    $("#btn_material_d").button().on("click", function(event)
+    {    
+         cont3--;
+        
+         $("#divmaterial ."+cont3).remove();
+         if(cont3 <= 1){
+             cont3=1;
+             $("#contadormaterial").empty()
+             $("#contadormaterial").val(0)
+         }else{ 
+              $("#contadormaterial").empty()
+              $("#contadormaterial").val(cont3-1)
+              
+         }
+        
+         
+         
+    });
+    
+   
 
 
     
