@@ -101,7 +101,7 @@ public class Servlet extends HttpServlet {
             out.println("<title>Servlet Servlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>" + "</h1>");
+            out.println("<h1>" + "Orden de produccion con referencia "+or.getProduccion().getReferencia()+" creada con exito"+"</h1>");
             out.println("</body>");
             out.println("</html>");
         }
