@@ -12,13 +12,13 @@ package Codigo;
 public class Cliente {
     
     private String nombre;
-    private int telefono;
+    private String telefono;
     private int nit;
 
     public Cliente() {
     }
 
-    public Cliente(String nombre, int telefono, int nit) {
+    public Cliente(String nombre, String telefono, int nit) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.nit = nit;
@@ -41,14 +41,14 @@ public class Cliente {
     /**
      * @return the telefono
      */
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
     /**
      * @param telefono the telefono to set
      */
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

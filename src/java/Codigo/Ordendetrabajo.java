@@ -9,23 +9,27 @@ import java.util.Date;
 public class Ordendetrabajo {
     
      private int id;
+     private Cliente cliente;
+     private String total;
+     private String ajustes;
      private String observaciones;
      private Date fechadeorden;
      private Date fechadeentrega;
      private Produccion produccion;
-     private Cliente cliente;
      private Tiraje tiraje;
 
     public Ordendetrabajo() {
     }
 
-    public Ordendetrabajo(int id, String observaciones, Date fechadeorden, Date fechadeentrega, Produccion produccion, Cliente cliente, Tiraje tiraje) {
-        this.id = id;
+    public Ordendetrabajo(Cliente cliente, String total, String ajustes, String observaciones, Date fechadeorden, Date fechadeentrega, Produccion produccion, Tiraje tiraje) {
+        
+        this.cliente = cliente;
+        this.total = total;
+        this.ajustes = ajustes;
         this.observaciones = observaciones;
         this.fechadeorden = fechadeorden;
         this.fechadeentrega = fechadeentrega;
         this.produccion = produccion;
-        this.cliente = cliente;
         this.tiraje = tiraje;
     }
 
@@ -41,6 +45,48 @@ public class Ordendetrabajo {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * @return the cliente
+     */
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    /**
+     * @param cliente the cliente to set
+     */
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    /**
+     * @return the total
+     */
+    public String getTotal() {
+        return total;
+    }
+
+    /**
+     * @param total the total to set
+     */
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    /**
+     * @return the ajustes
+     */
+    public String getAjustes() {
+        return ajustes;
+    }
+
+    /**
+     * @param ajustes the ajustes to set
+     */
+    public void setAjustes(String ajustes) {
+        this.ajustes = ajustes;
     }
 
     /**
@@ -100,20 +146,6 @@ public class Ordendetrabajo {
     }
 
     /**
-     * @return the cliente
-     */
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    /**
-     * @param cliente the cliente to set
-     */
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    /**
      * @return the tiraje
      */
     public Tiraje getTiraje() {
@@ -126,9 +158,6 @@ public class Ordendetrabajo {
     public void setTiraje(Tiraje tiraje) {
         this.tiraje = tiraje;
     }
-     
-     
-     
-     
-   
+    
+
 }

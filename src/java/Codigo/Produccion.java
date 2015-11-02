@@ -13,32 +13,32 @@ import java.util.LinkedList;
  */
 public class Produccion {
     private String referencia;
-    private int cantidad;
     private int muestraimpresa;
+    private int cantidad;
     private String maquina;
-    private int numerodeplanchas;
-    private int metalicas;
-    private int electros;
-    private OrdenTalonario talonario;
     private LinkedList<Material> material;
     private LinkedList<Montaje> montaje;
     private LinkedList<Tinta> tinta;
-
+    private int numerodeplanchas;
+    private int electros;
+    private int metalicas;
+    private OrdenTalonario talonario;
+    
     public Produccion() {
     }
-
-    public Produccion(String referencia, int cantidad, int muestraimpresa, String maquina, int numerodeplanchas, int metalicas, int electros, OrdenTalonario talonario, LinkedList<Material> material, LinkedList<Montaje> montaje, LinkedList<Tinta> tinta) {
+    
+    public Produccion(String referencia, int muestraimpresa, int cantidad, String maquina, LinkedList<Material> material, LinkedList<Montaje> montaje, LinkedList<Tinta> tinta, int numerodeplanchas, int electros, int metalicas, OrdenTalonario talonario) {
         this.referencia = referencia;
-        this.cantidad = cantidad;
         this.muestraimpresa = muestraimpresa;
+        this.cantidad = cantidad;
         this.maquina = maquina;
-        this.numerodeplanchas = numerodeplanchas;
-        this.metalicas = metalicas;
-        this.electros = electros;
-        this.talonario = talonario;
         this.material = material;
         this.montaje = montaje;
         this.tinta = tinta;
+        this.numerodeplanchas = numerodeplanchas;
+        this.electros = electros;
+        this.metalicas = metalicas;
+        this.talonario = talonario;
     }
 
     /**
@@ -56,20 +56,6 @@ public class Produccion {
     }
 
     /**
-     * @return the cantidad
-     */
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    /**
-     * @param cantidad the cantidad to set
-     */
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    /**
      * @return the muestraimpresa
      */
     public int getMuestraimpresa() {
@@ -84,6 +70,20 @@ public class Produccion {
     }
 
     /**
+     * @return the cantidad
+     */
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    /**
+     * @param cantidad the cantidad to set
+     */
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    /**
      * @return the maquina
      */
     public String getMaquina() {
@@ -95,62 +95,6 @@ public class Produccion {
      */
     public void setMaquina(String maquina) {
         this.maquina = maquina;
-    }
-
-    /**
-     * @return the numerodeplanchas
-     */
-    public int getNumerodeplanchas() {
-        return numerodeplanchas;
-    }
-
-    /**
-     * @param numerodeplanchas the numerodeplanchas to set
-     */
-    public void setNumerodeplanchas(int numerodeplanchas) {
-        this.numerodeplanchas = numerodeplanchas;
-    }
-
-    /**
-     * @return the metalicas
-     */
-    public int getMetalicas() {
-        return metalicas;
-    }
-
-    /**
-     * @param metalicas the metalicas to set
-     */
-    public void setMetalicas(int metalicas) {
-        this.metalicas = metalicas;
-    }
-
-    /**
-     * @return the electros
-     */
-    public int getElectros() {
-        return electros;
-    }
-
-    /**
-     * @param electros the electros to set
-     */
-    public void setElectros(int electros) {
-        this.electros = electros;
-    }
-
-    /**
-     * @return the talonario
-     */
-    public OrdenTalonario getTalonario() {
-        return talonario;
-    }
-
-    /**
-     * @param talonario the talonario to set
-     */
-    public void setTalonario(OrdenTalonario talonario) {
-        this.talonario = talonario;
     }
 
     /**
@@ -194,6 +138,67 @@ public class Produccion {
     public void setTinta(LinkedList<Tinta> tinta) {
         this.tinta = tinta;
     }
+
+    /**
+     * @return the numerodeplanchas
+     */
+    public int getNumerodeplanchas() {
+        return numerodeplanchas;
+    }
+
+    /**
+     * @param numerodeplanchas the numerodeplanchas to set
+     */
+    public void setNumerodeplanchas(int numerodeplanchas) {
+        this.numerodeplanchas = numerodeplanchas;
+    }
+
+    /**
+     * @return the electros
+     */
+    public int getElectros() {
+        return electros;
+    }
+
+    /**
+     * @param electros the electros to set
+     */
+    public void setElectros(int electros) {
+        this.electros = electros;
+    }
+
+    /**
+     * @return the metalicas
+     */
+    public int getMetalicas() {
+        return metalicas;
+    }
+
+    /**
+     * @param metalicas the metalicas to set
+     */
+    public void setMetalicas(int metalicas) {
+        this.metalicas = metalicas;
+    }
+
+    /**
+     * @return the talonario
+     */
+    public OrdenTalonario getTalonario() {
+        return talonario;
+    }
+
+    /**
+     * @param talonario the talonario to set
+     */
+    public void setTalonario(OrdenTalonario talonario) {
+        this.talonario = talonario;
+    }
+    
+    
+    
+
+   
     
     
     
