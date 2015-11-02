@@ -13,15 +13,15 @@ public class Ordendetrabajo {
      private String total;
      private String ajustes;
      private String observaciones;
-     private Date fechadeorden;
-     private Date fechadeentrega;
+     private String fechadeorden;
+     private String fechadeentrega;
      private Produccion produccion;
      private Tiraje tiraje;
 
     public Ordendetrabajo() {
     }
 
-    public Ordendetrabajo(Cliente cliente, String total, String ajustes, String observaciones, Date fechadeorden, Date fechadeentrega, Produccion produccion, Tiraje tiraje) {
+    public Ordendetrabajo(Cliente cliente, String total, String ajustes, String observaciones, String fechadeorden, String fechadeentrega, Produccion produccion, Tiraje tiraje) {
         
         this.cliente = cliente;
         this.total = total;
@@ -106,28 +106,28 @@ public class Ordendetrabajo {
     /**
      * @return the fechadeorden
      */
-    public Date getFechadeorden() {
+    public String getFechadeorden() {
         return fechadeorden;
     }
 
     /**
      * @param fechadeorden the fechadeorden to set
      */
-    public void setFechadeorden(Date fechadeorden) {
+    public void setFechadeorden(String fechadeorden) {
         this.fechadeorden = fechadeorden;
     }
 
     /**
      * @return the fechadeentrega
      */
-    public Date getFechadeentrega() {
+    public String getFechadeentrega() {
         return fechadeentrega;
     }
 
     /**
      * @param fechadeentrega the fechadeentrega to set
      */
-    public void setFechadeentrega(Date fechadeentrega) {
+    public void setFechadeentrega(String fechadeentrega) {
         this.fechadeentrega = fechadeentrega;
     }
 

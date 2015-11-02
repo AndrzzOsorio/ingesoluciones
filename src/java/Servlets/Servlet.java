@@ -82,11 +82,11 @@ public class Servlet extends HttpServlet {
 
 // ahora con todos los datos recolectados anteriormente se contruye la orden de trabajo completa
 //        Ordendetrabajo or = new Ordendetrabajo(cli,request.getParameter("total"), request.getParameter("ajustes"),
-//                                 request.getParameter("observaciones"), new Date(), 
-//                                 new Date(request.getParameter("fechaentrega")), pr, ti);
+//                                 request.getParameter("observaciones"),request.getParameter("fechae") , 
+//                                 request.getParameter("fechaentrega"), pr, ti);
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
-        
+      
         
         
         
