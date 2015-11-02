@@ -6,6 +6,10 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,25 +64,28 @@ and open the template in the editor.
 		<INPUT type=text name="material">
 		Numero de pliegos
 		<INPUT type=text name="numpliegos">
-		Numero de pliegos
-		<INPUT type=text name="numpliegos1">
+		<button type="button" id="btn_material">Añadir Material</button>
         </p>
+         <div id="divmaterial"></div>
         <p>
         Montaje
 		<INPUT type=text name="montaje">
     	Corte Inicial
 		<INPUT type=text name="cinical">
-    	Corte Inicial
-		<INPUT type=text name="cinicial1">
+                <button type="button" id="btn_montaje">Añadir Montaje</button>
+    	
         </p>
+        <div id="divmontaje"></div>
         <p>
         Tintas
 		<INPUT type=text name="tintas">
+                <button type="button" id="btn_tint">+</button>
 		Planchas
 		<INPUT type=text name="planchas">
 		Metalicos: <INPUT type=checkbox name="metalicos" >
 		Electros: <INPUT type=checkbox name="electros" >
         </p>
+        <div id="divtint"></div>
         <p>
         Numero de talonario
 		<INPUT type=text name="talonario">
@@ -127,13 +134,15 @@ and open the template in the editor.
 		<INPUT type=text name="material1">
 		</p>
         <p>
-        Macula
-		<INPUT type=text name="matricula">
-        Tintas
+            Tintas
 		<INPUT type=text name="tintas1">
-		Numero de Plancha
+                <button type="button" id="btn_tint2">+</button>
+            Macula
+		<INPUT type=text name="matricula">
+        	Numero de Plancha
 		<INPUT type=text name="numplancha1">
         </p>
+        <div id="divtint2"></div>
         <p>
         Observaciones
 		<INPUT style="width:90%" type=text name="observaciones">
