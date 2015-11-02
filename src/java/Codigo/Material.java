@@ -20,6 +20,10 @@ public class Material {
         this.nombre = nombre;
         this.numerodepliegos = numerodepliegos;
     }
+     public Material(String nombre) {
+        this.nombre = nombre;
+        this.numerodepliegos = 1;
+    }
 
     /**
      * @return the nombre

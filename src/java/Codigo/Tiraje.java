@@ -12,29 +12,59 @@ import java.util.LinkedList;
  * @author 4NDR35
  */
 public class Tiraje {
+    private String cliente;
+    private String telefono;
     private String referencia;
     private int cantidad;
     private String maquina;
+    private Material material;
+    private LinkedList<Tinta> tinta;    
     private String macula;
     private int numeroplanchas;
     private String observaciones;
-    private LinkedList<Tinta> tinta;
-    private Material material;
-    private Cliente cliente;
-    
+
     public Tiraje() {
     }
 
-    public Tiraje(String referencia, int cantidad, String maquina, String macula, int numeroplanchas, String observaciones, LinkedList<Tinta> tinta, Material material, Cliente cliente) {
+    public Tiraje(String cliente, String telefono, String referencia, int cantidad, String maquina, Material material, LinkedList<Tinta> tinta, String macula, int numeroplanchas, String observaciones) {
+        this.cliente = cliente;
+        this.telefono = telefono;
         this.referencia = referencia;
         this.cantidad = cantidad;
         this.maquina = maquina;
+        this.material = material;
+        this.tinta = tinta;
         this.macula = macula;
         this.numeroplanchas = numeroplanchas;
         this.observaciones = observaciones;
-        this.tinta = tinta;
-        this.material = material;
+    }
+
+    /**
+     * @return the cliente
+     */
+    public String getCliente() {
+        return cliente;
+    }
+
+    /**
+     * @param cliente the cliente to set
+     */
+    public void setCliente(String cliente) {
         this.cliente = cliente;
+    }
+
+    /**
+     * @return the telefono
+     */
+    public String getTelefono() {
+        return telefono;
+    }
+
+    /**
+     * @param telefono the telefono to set
+     */
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     /**
@@ -80,6 +110,34 @@ public class Tiraje {
     }
 
     /**
+     * @return the material
+     */
+    public Material getMaterial() {
+        return material;
+    }
+
+    /**
+     * @param material the material to set
+     */
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
+
+    /**
+     * @return the tinta
+     */
+    public LinkedList<Tinta> getTinta() {
+        return tinta;
+    }
+
+    /**
+     * @param tinta the tinta to set
+     */
+    public void setTinta(LinkedList<Tinta> tinta) {
+        this.tinta = tinta;
+    }
+
+    /**
      * @return the macula
      */
     public String getMacula() {
@@ -120,48 +178,10 @@ public class Tiraje {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-
-    /**
-     * @return the tinta
-     */
-    public LinkedList<Tinta> getTinta() {
-        return tinta;
-    }
-
-    /**
-     * @param tinta the tinta to set
-     */
-    public void setTinta(LinkedList<Tinta> tinta) {
-        this.tinta = tinta;
-    }
-
-    /**
-     * @return the material
-     */
-    public Material getMaterial() {
-        return material;
-    }
-
-    /**
-     * @param material the material to set
-     */
-    public void setMaterial(Material material) {
-        this.material = material;
-    }
-
-    /**
-     * @return the cliente
-     */
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    /**
-     * @param cliente the cliente to set
-     */
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
+    
+    
+    
+   
 
     
     

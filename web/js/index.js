@@ -7,13 +7,23 @@ var cont = 1;
 var cont1 = 1;
 var cont2 = 1;
 var cont3 = 1; 
+$( document ).ready(function() {
+    $("#contadortin1").val(0)
+    $("#contadortin2").val(0)
+    $("#contadormaterial").val(0)
+    $("#contadormontaje").val(0)
+});
+
+
 $(function()
 {
 	$("#btn_tint").button().on("click", function(event)
     {
          
 	$("#divtint").append("<p>Tinta "+cont+"<INPUT type=text name='tin"+cont+"'></p>");
-	 cont++;
+	    $("#contadortin1").empty()
+            $("#contadortin1").val(cont)
+            cont++;
          
     });
     
@@ -21,7 +31,10 @@ $(function()
     {
          
 	$("#divtint2").append("<p>Tinta "+cont1+"<INPUT type=text name='tin2"+cont1+"'></p>");
-	 cont1++;
+            $("#contadortin2").empty()	 
+            $("#contadortin2").val(cont1)
+            cont1++;
+         
          
     });
     
@@ -29,7 +42,9 @@ $(function()
     {
          
 	$("#divmontaje").append("<p>Montaje "+cont2+"<INPUT type=text name='montaje"+cont2+"'> Corte Inicial <INPUT type=text name='cinical"+cont2+"'></p>");
-	 cont2++;
+	    $("#contadormontaje").empty()
+            $("#contadormontaje").val(cont2)
+            cont2++;
          
     });
     
@@ -37,12 +52,14 @@ $(function()
     {
          
 	$("#divmaterial").append("<p>Material "+cont3+"<INPUT type=text name='material"+cont3+"'> Numero de pliegos <INPUT type=text name='numpliegos"+cont3+"'></p>");
-	 cont3++;
+	   $("#contadormaterial").empty()
+           $("#contadormaterial").val(cont3)
+           cont3++;
          
     });
 
 
-  
+    
 	
 });
     

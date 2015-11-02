@@ -10,7 +10,7 @@ and open the template in the editor.
         <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         
-        <title>TODO supply a title</title>
+        <title>Editorial Universo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -23,7 +23,7 @@ and open the template in the editor.
         <br />
 		<div>
 		Cliente
-		<INPUT style="width:40%" type=text name="Cliente">
+		<INPUT style="width:40%" type=text name="cliente">
 		Telefono
 		<INPUT type=text name="telefono">
 		Nit
@@ -61,7 +61,7 @@ and open the template in the editor.
         </p>
         <p>
         Material
-		<INPUT type=text name="material">
+		<INPUT type=text name="material0">
 		Numero de pliegos
 		<INPUT type=text name="numpliegos">
 		<button type="button" id="btn_material">Añadir Material</button>
@@ -69,7 +69,7 @@ and open the template in the editor.
          <div id="divmaterial"></div>
         <p>
         Montaje
-		<INPUT type=text name="montaje">
+		<INPUT type=text name="montaje0">
     	Corte Inicial
 		<INPUT type=text name="cinical">
                 <button type="button" id="btn_montaje">Añadir Montaje</button>
@@ -78,7 +78,7 @@ and open the template in the editor.
         <div id="divmontaje"></div>
         <p>
         Tintas
-		<INPUT type=text name="tintas">
+		<INPUT type=text name="tin0">
                 <button type="button" id="btn_tint">+</button>
 		Planchas
 		<INPUT type=text name="planchas">
@@ -120,7 +120,7 @@ and open the template in the editor.
         <p>
         Cliente
 		<INPUT style="width:40%" type=text name="cliente1">
-		Telefono
+        Telefono
 		<INPUT type=text name="telefono1">
         Referencia
 		<INPUT type=text name="referencia1">
@@ -128,18 +128,18 @@ and open the template in the editor.
         <p>
         Cantidad
 		<INPUT type=text name="cantidad1">
-		Maquina
+	Maquina
 		<INPUT type=text name="maquina1">
         Material
 		<INPUT type=text name="material1">
 		</p>
         <p>
             Tintas
-		<INPUT type=text name="tintas1">
+		<INPUT type=text name="tin20">
                 <button type="button" id="btn_tint2">+</button>
             Macula
 		<INPUT type=text name="matricula">
-        	Numero de Plancha
+        Numero de Plancha
 		<INPUT type=text name="numplancha1">
         </p>
         <div id="divtint2"></div>
@@ -171,6 +171,10 @@ and open the template in the editor.
         <br />
         <INPUT type="submit" value="Enviar">
         </div>
+        <INPUT style="display: none" type=text name="contadortin1" id="contadortin1">
+        <INPUT style="display: none" type=text name="contadortin2" id="contadortin2">
+        <INPUT style="display: none" type=text name="contadormaterial" id="contadormaterial">
+        <INPUT style="display: none" type=text name="contadormontaje" id="contadormontaje">
 	</div>
 </FORM>
     </body>
