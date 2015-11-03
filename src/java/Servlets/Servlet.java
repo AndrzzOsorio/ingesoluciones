@@ -155,7 +155,7 @@ public class Servlet extends HttpServlet {
             return x = 1;
         }
     }
-    //este metodo se usa para la seccion de muestra impresa retorna la desicion con respecto a la seleccion de los checkbox
+    //este metodo se usa para la seccion de muestra impresa retorna la desicion en forma de entero con respecto a la seleccion de los checkbox
     
     public int muestra (String s){
         int x = 0;
