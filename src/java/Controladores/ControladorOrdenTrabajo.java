@@ -82,7 +82,10 @@ public class ControladorOrdenTrabajo {
 
                Statement consulta=obj.getCon().createStatement();
                ResultSet rs=consulta.executeQuery("SELECT MAX(ID) FROM ORDENTALONARIO");
-               int Idtalonario = rs.getInt(1);
+               int Idtalonario = 0;
+               while(rs.next()){
+               Idtalonario = rs.getInt(1);
+               }
                rs.close();
 
                sql = "INSERT INTO PRODUCCION VALUES(?,?,?,?,?,?,?,?,?)";
@@ -102,12 +105,15 @@ public class ControladorOrdenTrabajo {
 
                consulta=obj.getCon().createStatement();
                rs=consulta.executeQuery("SELECT MAX(ID) FROM PRODUCCION");
-               int Idproduccion = rs.getInt(1);
+               int Idproduccion = 0;
+               while(rs.next()){
+               Idproduccion = rs.getInt(1);
+               }
                rs.close();
           
                 
             for(Montaje mon:or.getProduccion().getMontaje()){
-                String sqlintermedia = "INSERT INTO PRODUCCION_MONTAJE(?,?,?)";
+                String sqlintermedia = "INSERT INTO PRODUCCION_MONTAJE VALUES(?,?,?)";
                 String sqlmontaje = "INSERT INTO MONTAJE VALUES(?)";
                  
                 PreparedStatement stmtIntermedia = obj.getCon().prepareStatement(sqlintermedia);
@@ -119,11 +125,11 @@ public class ControladorOrdenTrabajo {
                     stmtIntermedia.setInt(1, Idproduccion);
                     stmtIntermedia.setString(2, mon.getNombre());
                     stmtIntermedia.setString(3, mon.getCorteinicial());
-                stmtIntermedia.executeUpdate();
+                    stmtIntermedia.executeUpdate();
             }
                
             for(Material mat:or.getProduccion().getMaterial()){
-                String sqlintermedia = "INSERT INTO PRODUCCION_MATERIAL(?,?,?)";
+                String sqlintermedia = "INSERT INTO PRODUCCION_MATERIAL VALUES(?,?,?)";
                 String sqlmaterial = "INSERT INTO MATERIAL VALUES(?)";
                  
                 PreparedStatement stmtIntermedia = obj.getCon().prepareStatement(sqlintermedia);
@@ -150,10 +156,13 @@ public class ControladorOrdenTrabajo {
 
                consulta=obj.getCon().createStatement();
                rs=consulta.executeQuery("SELECT MAX(ID) FROM TIRAJE");
-               int Idtiraje = rs.getInt(1);
+                int Idtiraje = 0;
+               while(rs.next()){
+               Idtiraje = rs.getInt(1);
+               }
                rs.close();
 
-               sql = "INSERT INTO ORDENTRABAJO VALUES(?,?,?,?,?,?,?)";
+               sql = "INSERT INTO ORDENTRABAJO VALUES(?,?,?,?,?,?,?,?)";
                stmt = obj.getCon().prepareStatement(sql);
 
                stmt.setNull(1, OracleTypes.NUMBER);
