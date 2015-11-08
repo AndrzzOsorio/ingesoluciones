@@ -7,40 +7,35 @@ import oracle.jdbc.OracleTypes;
 public class OracleConnection{  
     
     private String connectionString = "jdbc:oracle:thin:@localhost:1521:xe";
-    private String user = "hr";
-    private String password =  "ucaldashr";
-    protected Connection con;
+    private String user = "USERUNIVERSO";
+    private String password =  "1234";
+    private Connection con;
 
     public OracleConnection() {
         
     }
     
+    
     public void connect(){
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");  
-            con = DriverManager.getConnection(connectionString,user,password);
-            } catch (Exception e) {
-               System.out.println("error1");
-            } 
+            Class.forName("oracle.jdbc.driver.OracleDriver"); 
+          } catch(ClassNotFoundException e) {
+            System.err.println (e) ;
+            System.exit (-1) ;
+        }
+        try {
+             con = DriverManager.getConnection(connectionString,user,password);
+        } catch (java.sql.SQLException e) {
+            System.err.println (e) ;
+            System.exit (-1) ;
+        }
+           
+          
     }
     //ejecucion de un sql.
     public void  consultarTalonarios(){
        
-      try {
-       
-        Statement stmt=con.createStatement();  
-        
-        
- 
-       ResultSet rs=stmt.executeQuery("SELECT * FROM EMPLOYEES");  
-       while(rs.next())  
-       System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
-        con.close(); 
-            
-        } catch (Exception e) {
-            System.out.println("error2");
-      }
- 
+      
     }
     
 /*Procedimiento de EJEMPLO
@@ -65,9 +60,15 @@ End ProGetPrueba1;
         try {
        
         Statement stmt=con.createStatement();  
+       
+        String [] ar = { "10022", "02110", "07399" };
+        Array arreglo = con.createArrayOf("VARCHAR2", ar);
+       
         
+       
+          
         // se define el procedimiento almacenado a llamar (estili PL/SQL)
-        String sql="begin ProGetPrueba1(?,?); end;"; 
+        String sql="begin PRUEBA_ARRAY(?); end;"; 
         
         CallableStatement ca = con.prepareCall(sql);
         
@@ -77,31 +78,50 @@ End ProGetPrueba1;
         y sutipo correspondiente en oracle*/
         
         // se define cursor de salida
-        ca.registerOutParameter(1, OracleTypes.CURSOR);
+        //ca.registerOutParameter(1, OracleTypes.CURSOR);
         
         /*se definen el resto de valores de entrada con set dependiendo de su tipo
         de dato y recibe el indice en la firma del procedimiento y el valor para el
         parametro*/
-        ca.setLong(2, 1L);
+        ca.setArray(1, arreglo);
+        
+        
         
         //se ejecuta el procedimiento
         ca.execute();
         
  
        //Se obtienen los valores que se retornan en el cursor en forma de ResultSe
+        /*
         ResultSet rs = (ResultSet)ca.getObject(1);
 	while (rs.next()){
 		System.out.println(rs.getLong("CODIGO"));
 		System.out.println(rs.getString("NOMBRE"));
 		}
-	rs.close();
+	rs.close();*/
 	ca.close();
 	con.close();
             
-        } catch (Exception e) {
-            System.out.println("error2");
-      }
+        } catch (java.sql.SQLException e) {
+            System.err.println (e) ;
+            System.exit (-1) ;
+        }
  
+    }
+    
+    public void cerrar(){
+        try {
+             con.close();
+        } catch (java.sql.SQLException e) {
+            System.err.println (e) ;
+            System.exit (-1) ;
+        }
+  
+       
+    }
+
+    public Connection getCon() {
+        return con;
     }
         
     
