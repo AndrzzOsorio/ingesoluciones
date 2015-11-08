@@ -17,11 +17,14 @@ public class Ordendetrabajo {
      private String fechadeentrega;
      private Produccion produccion;
      private Tiraje tiraje;
+     private String elaboro;
+     private String recibi;
+     private int cc;
 
     public Ordendetrabajo() {
     }
 
-    public Ordendetrabajo(Cliente cliente, String total, String ajustes, String observaciones, String fechadeorden, String fechadeentrega, Produccion produccion, Tiraje tiraje) {
+    public Ordendetrabajo(Cliente cliente, String total, String ajustes, String observaciones, String fechadeorden, String fechadeentrega, Produccion produccion, Tiraje tiraje, String elaboro,String recibi,int cc) {
         
         this.cliente = cliente;
         this.total = total;
@@ -31,6 +34,9 @@ public class Ordendetrabajo {
         this.fechadeentrega = fechadeentrega;
         this.produccion = produccion;
         this.tiraje = tiraje;
+        this.elaboro = elaboro;
+        this.recibi = recibi;
+        this.cc = cc;
     }
 
     /**
@@ -157,6 +163,48 @@ public class Ordendetrabajo {
      */
     public void setTiraje(Tiraje tiraje) {
         this.tiraje = tiraje;
+    }
+
+    /**
+     * @return the elaboro
+     */
+    public String getElaboro() {
+        return elaboro;
+    }
+
+    /**
+     * @param elaboro the elaboro to set
+     */
+    public void setElaboro(String elaboro) {
+        this.elaboro = elaboro;
+    }
+
+    /**
+     * @return the recibi
+     */
+    public String getRecibi() {
+        return recibi;
+    }
+
+    /**
+     * @param recibi the recibi to set
+     */
+    public void setRecibi(String recibi) {
+        this.recibi = recibi;
+    }
+
+    /**
+     * @return the cc
+     */
+    public int getCc() {
+        return cc;
+    }
+
+    /**
+     * @param cc the cc to set
+     */
+    public void setCc(int cc) {
+        this.cc = cc;
     }
     
 

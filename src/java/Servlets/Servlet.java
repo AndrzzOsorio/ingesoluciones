@@ -95,11 +95,16 @@ public class Servlet extends HttpServlet {
 //// ahora con todos los datos recolectados anteriormente se contruye la orden de trabajo completa
         Ordendetrabajo or = new Ordendetrabajo(cli,request.getParameter("total"), request.getParameter("ajustes"),
                                  request.getParameter("observaciones"),request.getParameter("fechae") , 
-                                 request.getParameter("fechaentrega"), pr, ti);
+                                 request.getParameter("fechaentrega"), pr, ti,request.getParameter("elaboro"),request.getParameter("conforme"),
+                                 Integer.parseInt(request.getParameter("cc")));
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
-        String x = tintastiraje.get(0).getNombre();
+        String confirmacion = "Ha ocurrido un problema y su orden de trabajo no ha podido ser registrada";
 
-        control.registrar(or);
+        if(control.registrar(or)){
+            confirmacion = "La orden de trabajo con referencia "+or.getProduccion().getReferencia()+" ha sido registrada exitosamente en la base de datos";
+        }
+        
+        
         try (PrintWriter out = response.getWriter()) {
 
             out.println("<!DOCTYPE html>");
@@ -108,7 +113,7 @@ public class Servlet extends HttpServlet {
             out.println("<title>Servlet Servlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>" + x + "</h1>");
+            out.println("<h1>" +confirmacion+ "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
