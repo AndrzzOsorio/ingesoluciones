@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+  <head>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+        <script type="text/javascript" src="js/Ordendediseño.js"></script>
+        
+        <title>Editorial Universo - Orden de diseño</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <FORM method=post action="Servletordendiseño">
+		<div style="width:80%; margin-left:130px">
+        
+    	<div style="width:100%">
+        EDITORIAL UNIVERSO - Orden de diseño
+        </div>
+        <br />
+        
+        <div>
+        <p>
+        Cliente
+        <INPUT style="width:40%" type=text name="cliente">
+		Email
+		<INPUT style="width:40%" type=text name="email">
+        </p><p>
+        Telefono
+		<INPUT style="width:38%" type=text name="telefono">
+		Nit
+		<INPUT style="width:43%" type=text name="nit">
+        </p>
+		</div>
+        <br />
+        <div>
+        <center>DISEÑO</center>
+        </div>
+        <br />
+        
+        <div>
+        <p>
+        Referencia
+		<INPUT style="width:40%" type=text name="referencia">
+		Muestra Impresa
+                <select name="muestraimpresa"> 
+                    <option>Si</option>
+                    <option>No</option>   
+                </select>
+        </p>
+        
+        <p>
+        Cantidad
+		<INPUT type=text name="cantidad">
+        Montaje
+		<INPUT type=text name="montaje">
+        Tamaño
+		<INPUT type=text name="tamaño">
+		</p>        
+        <div id="divmontaje"></div>
+        <p>
+        Tintas
+		<INPUT type=text name="tintas0">
+                <button type="button" id="btn_tint">+</button>
+                <button type="button" id="btn_tint_d">-</button>
+        
+        Ubicación :
+        Disco duro
+		<INPUT type=checkbox name="disco_duro" >
+		Correo
+		<INPUT type=checkbox name="correo" >
+		CD/DVD
+		<INPUT type=checkbox name="CDDVD" >
+		Otro
+		<INPUT type=checkbox name="otro" >
+        </p>
+        <div id="divtint"></div>
+        <p>
+        Descripción
+        <TEXTAREA style="width:100%" rows="3" name="descripcion"></TEXTAREA>
+        </p>
+        </div>
+        <br />
+        <div>
+        <center>PRODUCCIÓN</center>
+        </div>
+        <br />
+        
+        <div>
+        <p>
+        Referencia
+		<INPUT style="width:40%" type=text name="referencia">
+        </p><p> 
+        Cantidad
+		<INPUT type=text name="cantidad">       
+        Material
+		<INPUT type=text name="material">
+        Matricula
+		<INPUT type=text name="matricula">
+        </p><p>
+        Tintas
+		<INPUT type=text name="tintas00">
+                <button type="button" id="btn_tint2">+</button>
+                <button type="button" id="btn_tint2_d">-</button>
+        </p>
+        <div id="divtint2"></div>
+        <p>
+        Planchas
+		<INPUT type=text name="planchas">
+        </p>
+        <center>OBSERVACIONES</center>
+        <br />
+        <TEXTAREA style="width:100%" rows="5" name="observaciones"></TEXTAREA>
+        </div>
+        <div>
+        <p>
+        Fecha de elaboración
+        <input type="date" name="fechae" />
+        </p>
+        <p>
+        Fecha de entrega
+        <input type="date" name="fechaentrega" />
+        </p>
+        <p>
+        Elaboró
+		<INPUT style="width:25%" type=text name="elaboro">
+		Recibí conforme
+		<INPUT style="width:25%" type=text name="conforme">
+		CC
+		<INPUT style="width:25%" type=text name="cc">
+        </p>
+        </div>
+        
+        <div>
+        <br />
+        <INPUT type="submit" value="Enviar">
+        <input type="button" value="Regresar" onclick="location.href='index.html'">
+        </div>
+        <INPUT style="display: none" type=text name="contadortin0" id="contadortinta0">
+        <INPUT style="display: none" type=text name="contadortin00" id="contadortinta00">
+        
+        </div>
+		</FORM>
+	</body>
+</html>
