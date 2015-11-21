@@ -34,7 +34,7 @@ public class Serveltordendiseño extends HttpServlet {
 
 
 //----------------------------------------------------------CLIENTE-----------------------------------------------------------------------------------------------------------------------------------        
-//   se crea el cliente en base a los datos obtenido en la interfaz       
+//   se crea el cliente en base a los datos obtenidos en la interfaz       
          Clientediseño cli = new Clientediseño(request.getParameter("cliente"),request.getParameter("email"),Integer.parseInt(request.getParameter("telefono")),
                                                Integer.parseInt(request.getParameter("nit")));
 
@@ -61,7 +61,7 @@ public class Serveltordendiseño extends HttpServlet {
         }}
            Ordendiseño or  = new Ordendiseño(request.getParameter("referenciadiseño"), muestra(request.getParameter("muestraimpresa")), Integer.parseInt(request.getParameter("cantidad")), 
                                request.getParameter("montaje"), request.getParameter("tamaño"), tintasdiseño,conversion(request.getParameter("DD")),conversion(request.getParameter("correo")),
-                               conversion(request.getParameter("CDDVD")),conversion(request.getParameter("otro")),request.getParameter("descripcion"),cli,pro);
+                               conversion(request.getParameter("CDDVD")),conversion(request.getParameter("otro")),request.getParameter("fechacreacion"),request.getParameter("descripcion"),cli,pro);
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
         String confirmacion = "Ha ocurrido un problema y su orden de trabajo no ha podido ser registrada";
 

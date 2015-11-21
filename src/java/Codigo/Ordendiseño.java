@@ -23,6 +23,7 @@ public class Ordendiseño {
     private int correo;
     private int CDDVD;
     private int otro;
+    private String fechacreacion;
     private String descripcion;
     private Clientediseño cliente;
     private Producciondiseño preproduccion;
@@ -30,7 +31,7 @@ public class Ordendiseño {
     public Ordendiseño() {
     }
 
-    public Ordendiseño(String referencia, int muestraimpresa, int cantidad, String montaje, String tamaño, LinkedList<Tinta> tintas, int DD, int correo, int CDDVD, int otro, String descripcion, Clientediseño cliente, Producciondiseño preproduccion) {
+    public Ordendiseño(String referencia, int muestraimpresa, int cantidad, String montaje, String tamaño, LinkedList<Tinta> tintas, int DD, int correo, int CDDVD, int otro,String fechacreacion, String descripcion, Clientediseño cliente, Producciondiseño preproduccion) {
         this.referencia = referencia;
         this.muestraimpresa = muestraimpresa;
         this.cantidad = cantidad;
@@ -41,6 +42,7 @@ public class Ordendiseño {
         this.correo = correo;
         this.CDDVD = CDDVD;
         this.otro = otro;
+        this.fechacreacion = fechacreacion;
         this.descripcion = descripcion;
         this.cliente = cliente;
         this.preproduccion = preproduccion;
@@ -226,6 +228,20 @@ public class Ordendiseño {
      */
     public void setPreproduccion(Producciondiseño preproduccion) {
         this.preproduccion = preproduccion;
+    }
+
+    /**
+     * @return the fechacreacion
+     */
+    public String getFechacreacion() {
+        return fechacreacion;
+    }
+
+    /**
+     * @param fechacreacion the fechacreacion to set
+     */
+    public void setFechacreacion(String fechacreacion) {
+        this.fechacreacion = fechacreacion;
     }
     
     
