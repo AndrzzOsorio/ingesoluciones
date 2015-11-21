@@ -114,6 +114,7 @@ public class Servletordentrabajo extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>" +confirmacion+ "</h1>");
+            out.println("<input type=\"button\" value=\"Regresar\" onclick=\"location.href='index.html'\">");
             out.println("</body>");
             out.println("</html>");
         }
