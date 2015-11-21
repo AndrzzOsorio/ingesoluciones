@@ -26,12 +26,12 @@ public class Ordendiseño {
     private String fechacreacion;
     private String descripcion;
     private Clientediseño cliente;
-    private Producciondiseño preproduccion;
+    private Producciondiseno preproduccion;
 
     public Ordendiseño() {
     }
 
-    public Ordendiseño(String referencia, int muestraimpresa, int cantidad, String montaje, String tamaño, LinkedList<Tinta> tintas, int DD, int correo, int CDDVD, int otro,String fechacreacion, String descripcion, Clientediseño cliente, Producciondiseño preproduccion) {
+    public Ordendiseño(String referencia, int muestraimpresa, int cantidad, String montaje, String tamaño, LinkedList<Tinta> tintas, int DD, int correo, int CDDVD, int otro,String fechacreacion, String descripcion, Clientediseño cliente, Producciondiseno preproduccion) {
         this.referencia = referencia;
         this.muestraimpresa = muestraimpresa;
         this.cantidad = cantidad;
@@ -219,14 +219,14 @@ public class Ordendiseño {
     /**
      * @return the preproduccion
      */
-    public Producciondiseño getPreproduccion() {
+    public Producciondiseno getPreproduccion() {
         return preproduccion;
     }
 
     /**
      * @param preproduccion the preproduccion to set
      */
-    public void setPreproduccion(Producciondiseño preproduccion) {
+    public void setPreproduccion(Producciondiseno preproduccion) {
         this.preproduccion = preproduccion;
     }
 

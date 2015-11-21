@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>Servlet</servlet-name>
-        <servlet-class>Servlets.Servletordentrabajo</servlet-class>
+        <servlet-name>Servletdiseno</servlet-name>
+        <servlet-class>Servlets.Servletdiseno</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Serveltordendiseño</servlet-name>
-        <servlet-class>Servlets.Serveltordendiseño</servlet-class>
+        <servlet-name>Servlettrabajo</servlet-name>
+        <servlet-class>Servlets.Servlettrabajo</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Servlet</servlet-name>
-        <url-pattern>/Servlet</url-pattern>
+        <servlet-name>Servletdiseno</servlet-name>
+        <url-pattern>/Servletdiseno</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Serveltordendiseño</servlet-name>
-        <url-pattern>/Serveltordendise_o</url-pattern>
+        <servlet-name>Servlettrabajo</servlet-name>
+        <url-pattern>/Servlettrabajo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

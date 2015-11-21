@@ -18,7 +18,7 @@ import java.util.Date;
  *
  * @author 4NDR35
  */
-public class Servletordentrabajo extends HttpServlet {
+public class Servlettrabajo extends HttpServlet {
 
     private LinkedList<Montaje> mont = new LinkedList<>();
     private LinkedList<Tinta> tintastiraje = new LinkedList<>();

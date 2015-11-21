@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Servlets;
 
 
@@ -20,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author 4NDR35
  */
-public class Serveltordendiseño extends HttpServlet {
+public class Servletdiseno extends HttpServlet {
  
     private LinkedList<Tinta> tintasdiseño = new LinkedList<>();
     private LinkedList<Tinta> tintasproduccion = new LinkedList<>();
@@ -47,7 +42,7 @@ public class Serveltordendiseño extends HttpServlet {
               if (!(request.getParameter("tintas0" + i).equals(""))) {
             tintasproduccion.add(new Tinta(request.getParameter("tintas0"+i)));
         }} 
-         Producciondiseño pro = new Producciondiseño(request.getParameter("referenciaproduccion"), Integer.parseInt(request.getParameter("cantidad")), request.getParameter("material"),
+         Producciondiseno pro = new Producciondiseno(request.getParameter("referenciaproduccion"), Integer.parseInt(request.getParameter("cantidad")), request.getParameter("material"),
                                    request.getParameter("macula"), tintasproduccion, Integer.parseInt(request.getParameter("planchas")), request.getParameter("observaciones"),
                                    request.getParameter("fechaentrega"), request.getParameter("elaboro"), request.getParameter("conforme"), Integer.parseInt(request.getParameter("cc")));
        
@@ -65,9 +60,9 @@ public class Serveltordendiseño extends HttpServlet {
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
         String confirmacion = "Ha ocurrido un problema y su orden de trabajo no ha podido ser registrada";
 
-        if(control.registrar(or)){
-            confirmacion = "La orden de trabajo con referencia "+or.getPreproduccion().getReferencia()+" ha sido registrada exitosamente en la base de datos";
-        }
+//        if(control.registrar(or)){
+//            confirmacion = "La orden de trabajo con referencia "+or.getPreproduccion().getReferencia()+" ha sido registrada exitosamente en la base de datos";
+//        }
         
         
         try (PrintWriter out = response.getWriter()) {

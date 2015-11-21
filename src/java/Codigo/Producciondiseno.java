@@ -11,7 +11,7 @@ import java.util.LinkedList;
  *
  * @author 4NDR35
  */
-public class Producciondiseño {
+public class Producciondiseno {
     private String referencia;
     private int cantidad;
     private String material;
@@ -24,10 +24,10 @@ public class Producciondiseño {
     private String recibiconforme;
     private int cedula;
 
-    public Producciondiseño() {
+    public Producciondiseno() {
     }
 
-    public Producciondiseño(String referencia, int cantidad, String material, String macula, LinkedList<Tinta> tintas, int numplanchas, String observaciones, String fechaentrega, String elaboro, String recibiconforme, int cedula) {
+    public Producciondiseno(String referencia, int cantidad, String material, String macula, LinkedList<Tinta> tintas, int numplanchas, String observaciones, String fechaentrega, String elaboro, String recibiconforme, int cedula) {
         this.referencia = referencia;
         this.cantidad = cantidad;
         this.material = material;
