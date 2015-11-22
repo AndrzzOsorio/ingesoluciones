@@ -29,40 +29,41 @@ public class Servletdiseno extends HttpServlet {
 
 
 //----------------------------------------------------------CLIENTE-----------------------------------------------------------------------------------------------------------------------------------        
-//   se crea el cliente en base a los datos obtenidos en la interfaz       
-         Clientediseño cli = new Clientediseño(request.getParameter("cliente"),request.getParameter("email"),Integer.parseInt(request.getParameter("telefono")),
+////   se crea el cliente en base a los datos obtenidos en la interfaz       
+         Clientediseño cli = new Clientediseño(request.getParameter("cliente"),request.getParameter("email"),request.getParameter("telefono"),
                                                Integer.parseInt(request.getParameter("nit")));
 
-//-----------------------------------------------------------PRODUCCION-DISEÑO---------------------------------------------------------------------------------------------------------------------------------------------------------
-         
-//con los parametros establecidos anteriormente se construye la prduccion
-//primero se contruye el listado de tintas que tendrá la produccion       
+////-----------------------------------------------------------PRODUCCION-DISEÑO---------------------------------------------------------------------------------------------------------------------------------------------------------
+//         
+////con los parametros establecidos anteriormente se construye la prduccion
+////primero se contruye el listado de tintas que tendrá la produccion       
         int a  = Integer.parseInt(request.getParameter("contadortin00"));
         for (int i = 0; i <= a; i++) {
               if (!(request.getParameter("tintas0" + i).equals(""))) {
             tintasproduccion.add(new Tinta(request.getParameter("tintas0"+i)));
         }} 
-         Producciondiseno pro = new Producciondiseno(request.getParameter("referenciaproduccion"), Integer.parseInt(request.getParameter("cantidad")), request.getParameter("material"),
+         Producciondiseno pro = new Producciondiseno(request.getParameter("referenciaproduccion"), Integer.parseInt(request.getParameter("cantidadp")), request.getParameter("material"),
                                    request.getParameter("macula"), tintasproduccion, Integer.parseInt(request.getParameter("planchas")), request.getParameter("observaciones"),
                                    request.getParameter("fechaentrega"), request.getParameter("elaboro"), request.getParameter("conforme"), Integer.parseInt(request.getParameter("cc")));
        
-////-----------------------------------------------------------ORDEN DE DISEÑO-----------------------------------------------------------------------------------------------------------------        
-//
-//// ahora con todos los datos recolectados anteriormente se contruye la orden de diseño completa
+//////-----------------------------------------------------------ORDEN DE DISEÑO-----------------------------------------------------------------------------------------------------------------        
+////
+////// ahora con todos los datos recolectados anteriormente se contruye la orden de diseño completa
          int b  = Integer.parseInt(request.getParameter("contadortin0"));
         for (int i = 0; i <= b; i++) {
               if (!(request.getParameter("tintas" + i).equals(""))) {
             tintasdiseño.add(new Tinta(request.getParameter("tintas"+i)));
         }}
-           Ordendiseño or  = new Ordendiseño(request.getParameter("referenciadiseño"), muestra(request.getParameter("muestraimpresa")), Integer.parseInt(request.getParameter("cantidad")), 
-                               request.getParameter("montaje"), request.getParameter("tamaño"), tintasdiseño,conversion(request.getParameter("DD")),conversion(request.getParameter("correo")),
+           Ordendiseño or  = new Ordendiseño(request.getParameter("referenciadiseno"), muestra(request.getParameter("muestraimpresa")), Integer.parseInt(request.getParameter("cantidad")), 
+                               request.getParameter("montaje"), request.getParameter("tamano"), tintasdiseño,conversion(request.getParameter("DD")),conversion(request.getParameter("correo")),
                                conversion(request.getParameter("CDDVD")),conversion(request.getParameter("otro")),request.getParameter("fechacreacion"),request.getParameter("descripcion"),cli,pro);
-//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
+////-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
         String confirmacion = "Ha ocurrido un problema y su orden de trabajo no ha podido ser registrada";
 
-//        if(control.registrar(or)){
-//            confirmacion = "La orden de trabajo con referencia "+or.getPreproduccion().getReferencia()+" ha sido registrada exitosamente en la base de datos";
-//        }
+        if(control.registrar(or)){
+            confirmacion = "La orden de Diseño con referencia "+or.getPreproduccion().getReferencia()+" ha sido registrada exitosamente en la base de datos";
+        }
+        
         
         
         try (PrintWriter out = response.getWriter()) {

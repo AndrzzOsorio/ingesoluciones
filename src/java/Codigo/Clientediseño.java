@@ -13,13 +13,13 @@ public class Clientediseño {
     
     private String nombre;
     private String email;
-    private int telefono;
+    private String telefono;
     private int nit;
 
     public Clientediseño() {
     }
 
-    public Clientediseño(String nombre, String email, int telefono, int nit) {
+    public Clientediseño(String nombre, String email, String telefono, int nit) {
         this.nombre = nombre;
         this.email = email;
         this.telefono = telefono;
@@ -57,14 +57,14 @@ public class Clientediseño {
     /**
      * @return the telefono
      */
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
     /**
      * @param telefono the telefono to set
      */
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

@@ -2,8 +2,8 @@ var cont = 1;
 var cont1 = 1;
  
 $( document ).ready(function() {
-    $("#contadortin0").val(0)
-    $("#contadortin00").val(0)
+    $("#contadortinta0").val(0)
+    $("#contadortinta00").val(0)
     
 });
 
@@ -14,8 +14,8 @@ $(function()
     {
          
 	$("#divtint").append("<p class="+cont+">Tinta "+cont+"<INPUT type=text name='tintas"+cont+"'></p>");
-	    $("#contadortin0").empty()
-            $("#contadortin0").val(cont)
+	    $("#contadortinta0").empty()
+            $("#contadortinta0").val(cont)
             cont++;
          
     });
@@ -28,11 +28,11 @@ $(function()
          $("#divtint ."+cont).remove();
          if(cont <= 1){
              cont=1; 
-             $("#contadortin0").empty()
-             $("#contadortin0").val(0)
+             $("#contadortinta0").empty()
+             $("#contadortinta0").val(0)
          }else{
-             $("#contadortin0").empty()
-             $("#contadortin0").val(cont-1)
+             $("#contadortinta0").empty()
+             $("#contadortinta0").val(cont-1)
          }
         
          
@@ -42,8 +42,8 @@ $(function()
     {
          
 	$("#divtint2").append("<p class="+cont1+">Tinta "+cont1+"<INPUT type=text name='tintas0"+cont1+"'></p>");
-            $("#contadortin00").empty()	 
-            $("#contadortin00").val(cont1)
+            $("#contadortinta00").empty()	 
+            $("#contadortinta00").val(cont1)
             cont1++;
          
          
@@ -56,11 +56,11 @@ $(function()
          $("#divtint2 ."+cont1).remove();
          if(cont1 <= 1){
              cont1=1;
-             $("#contadortin00").empty()
-             $("#contadortin00").val(0)
+             $("#contadortinta00").empty()
+             $("#contadortinta00").val(0)
          }else{
-              $("#contadortin00").empty()
-              $("#contadortin00").val(cont1-1)
+              $("#contadortinta00").empty()
+              $("#contadortinta00").val(cont1-1)
          }
              
          
