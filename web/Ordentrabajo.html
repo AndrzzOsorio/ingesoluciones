@@ -23,11 +23,11 @@ and open the template in the editor.
         <br />
 		<div>
 		Cliente
-		<INPUT style="width:40%" type=text name="cliente">
+                <INPUT style="width:40%" type=text name="cliente" required="required">
 		Telefono
-		<INPUT type=text name="telefono">
+		<INPUT type=text name="telefono" required="required">
 		Nit
-		<INPUT type=text name="nit">
+                <INPUT type=number name="nit" required="required" id="nit">
 		</div>
         <div>
         <br />
@@ -36,7 +36,7 @@ and open the template in the editor.
         </div>
         <br />
         Total
-		<INPUT style="width:30%" type=text name="total">
+		<INPUT style="width:30%" type=text name="total" required="required">
 		Ajustes
 		<INPUT style="width:30%" type=text name="ajustes">
         </div>
@@ -48,7 +48,7 @@ and open the template in the editor.
         <br />
         <p>
         Referencia
-		<INPUT style="width:70%" type=text name="referencia">
+		<INPUT style="width:70%" type=text name="referencia" required="required">
 		Muestra Impresa
                 <select name="muestraimpresa"> 
                     <option>Si</option>
@@ -58,15 +58,15 @@ and open the template in the editor.
         </p>
         <p>
         Cantidad
-		<INPUT type=text name="cantidad">
+        <INPUT type=number name="cantidad" required="required"  id="cant1">
 	Maquina
-		<INPUT style="width:70%" type=text name="maquina">
+		<INPUT style="width:70%" type=text name="maquina" required="required">
         </p>
         <p>
         Material
 		<INPUT type=text name="material0">
 		Numero de pliegos
-		<INPUT type=text name="numpliegos0">
+                <INPUT type=number name="numpliegos0" required="required" id="numpliegos">
 		<button type="button" id="btn_material">Añadir Material</button>
                 <button type="button" id="btn_material_d">Eliminar Material</button>
                 
@@ -74,9 +74,9 @@ and open the template in the editor.
          <div id="divmaterial"></div>
         <p>
         Montaje
-		<INPUT type=text name="montaje0">
+		<INPUT type=text name="montaje0" required="required">
     	Corte Inicial
-		<INPUT type=text name="cinicial0">
+		<INPUT type=text name="cinicial0" required="required">
                 <button type="button" id="btn_montaje">Añadir Montaje</button>
                 <button type="button" id="btn_montaje_d">Eliminar Montaje</button>
     	
@@ -84,24 +84,24 @@ and open the template in the editor.
         <div id="divmontaje"></div>
         <p>
         Tintas
-		<INPUT type=text name="tin0">
+		<INPUT type=text name="tin0" required="required">
                 <button type="button" id="btn_tint">+</button>
                 <button type="button" id="btn_tint_d">-</button>
 		Planchas
-		<INPUT type=text name="planchas">
+                <INPUT type=number name="planchas" required="required" id="planchas">
 		Metalicos: <INPUT type=checkbox name="metalicos" >
 		Electros: <INPUT type=checkbox name="electros" >
         </p>
         <div id="divtint"></div>
         <p>
         Numero de talonario
-		<INPUT type=text name="talonario">
+        <INPUT type=number name="talonario" required="required" id="talonario">
 		Numerados del
-		<INPUT type=text name="del">
+                <INPUT type=number name="del" required="required" id="del">
 		Al
-		<INPUT type=text name="al">
+                <INPUT type=number name="al" required="required" id="al">
 		Tinta
-		<INPUT type=text name="tinta">
+		<INPUT type=text name="tinta" required="required">
         </p>
         <p>
 		Perforado
@@ -126,29 +126,29 @@ and open the template in the editor.
         <br />
         <p>
         Cliente
-		<INPUT style="width:40%" type=text name="cliente1">
+		<INPUT style="width:40%" type=text name="cliente1" required="required">
         Telefono
 		<INPUT type=text name="telefono1">
         Referencia
-		<INPUT type=text name="referencia1">
+		<INPUT type=text name="referencia1" required="required">
 		</p>
         <p>
         Cantidad
-		<INPUT type=text name="cantidad1">
+        <INPUT type=number name="cantidad1" required="required" id="cant2">
 	Maquina
-		<INPUT type=text name="maquina1">
+		<INPUT type=text name="maquina1" required="required">
         Material
-		<INPUT type=text name="material">
+		<INPUT type=text name="material" required="required">
 		</p>
         <p>
             Tintas
-		<INPUT type=text name="tin20">
+		<INPUT type=text name="tin20" required="required">
                 <button type="button" id="btn_tint2">+</button>
                 <button type="button" id="btn_tint2_d">-</button>
             Macula
-		<INPUT type=text name="macula">
+		<INPUT type=text name="macula" required="required">
         Numero de Plancha
-		<INPUT type=text name="numplancha1">
+        <INPUT type=number name="numplancha1" required="required" id="planchas2">
         </p>
         <div id="divtint2"></div>
         <p>
@@ -163,25 +163,25 @@ and open the template in the editor.
 		<TEXTAREA style="width:100%" rows="5" name="comentarios"></TEXTAREA>
         <p>
         Fecha de elaboración
-        <input type="date" name="fechae" />
+        <input type="date" name="fechae" required="required" id="fechael">
         </p>
         <p>
         Fecha de entrega
-        <input type="date" name="fechaentrega" />
+        <input type="date" name="fechaentrega" required="required" id="fechaen">
         </p>
         </div>
         <div>
         <br />
         Elaboró
-		<INPUT style="width:25%" type=text name="elaboro">
+		<INPUT style="width:25%" type=text name="elaboro" required="required">
 		Recibí conforme
-		<INPUT style="width:25%" type=text name="conforme">
+		<INPUT style="width:25%" type=text name="conforme" required="required">
 		CC
-		<INPUT style="width:25%" type=text name="cc">
+                <INPUT style="width:25%" type=number name="cc" required="required" id="cc">
         </div>
         <div>
         <br />
-        <INPUT type="submit" value="Enviar">
+        <INPUT type="submit" value="Enviar" id="enviar">
         <input type="button" value="Regresar" onclick="location.href='index.html'">
         </div>
         <INPUT style="display: none" type=text name="contadortin1" id="contadortin1">

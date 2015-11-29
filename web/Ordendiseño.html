@@ -25,14 +25,14 @@ and open the template in the editor.
         <div>
         <p>
         Cliente
-        <INPUT style="width:40%" type=text name="cliente">
+        <INPUT style="width:40%" type=text name="cliente" required="required">
 		Email
-                <INPUT style="width:40%" type=email name="email">
+                <INPUT style="width:40%" type=email name="email" required="required">
         </p><p>
         Telefono
-		<INPUT style="width:38%" type=text name="telefono">
+		<INPUT style="width:38%" type=text name="telefono" required="required">
 		Nit
-		<INPUT style="width:43%" type=text name="nit">
+		<INPUT style="width:43%" type=number name="nit" required="required" id="nit2">
         </p>
 		</div>
         <br />
@@ -44,7 +44,7 @@ and open the template in the editor.
         <div>
         <p>
         Referencia
-		<INPUT style="width:40%" type=text name="referenciadiseno">
+		<INPUT style="width:40%" type=text name="referenciadiseno" required="required">
 		Muestra Impresa
                 <select name="muestraimpresa"> 
                     <option>Si</option>
@@ -54,16 +54,16 @@ and open the template in the editor.
         
         <p>
         Cantidad
-		<INPUT type=text name="cantidad">
+		<INPUT type=number name="cantidad" required="required" id="cant1">
         Montaje
-		<INPUT type=text name="montaje">
+		<INPUT type=text name="montaje" required="required">
         Tamaño
-		<INPUT type=text name="tamano">
+		<INPUT type=text name="tamano" required="required">
 		</p>        
         <div id="divmontaje"></div>
         <p>
         Tintas
-		<INPUT type=text name="tintas0">
+		<INPUT type=text name="tintas0" required="required">
                 <button type="button" id="btn_tint">+</button>
                 <button type="button" id="btn_tint_d">-</button>
         
@@ -92,46 +92,45 @@ and open the template in the editor.
         <div>
         <p>
         Referencia
-		<INPUT style="width:40%" type=text name="referenciaproduccion">
+		<INPUT style="width:40%" type=text name="referenciaproduccion" required="required">
         </p><p> 
         Cantidad
-		<INPUT type=text name="cantidadp">       
+		<INPUT type=number name="cantidadp" required="required" id="cant2">       
         Material
-		<INPUT type=text name="material">
+		<INPUT type=text name="material" required="required">
         Macula
-		<INPUT type=text name="macula">
+		<INPUT type=text name="macula" required="required">
         </p><p>
         Tintas
-		<INPUT type=text name="tintas00">
+		<INPUT type=text name="tintas00" required="required">
                 <button type="button" id="btn_tint2">+</button>
                 <button type="button" id="btn_tint2_d">-</button>
         </p>
         <div id="divtint2"></div>
         <p>
         Planchas
-		<INPUT type=text name="planchas">
+		<INPUT type=number name="planchas" required="required" id="planchas">
         </p>
         <center>OBSERVACIONES</center>
         <br />
         <TEXTAREA style="width:100%" rows="5" name="observaciones"></TEXTAREA>
         </div>
         <div>
-        
-        <p>
-        Fecha de entrega
-        <input type="date" name="fechaentrega" />
-        </p>
         <p>
         Fecha de creacion
-        <input type="date" name="fechacreacion" />
+        <input type="date" name="fechacreacion" required="required" id="fechael1">
+        </p>
+        <p>
+        Fecha de entrega
+        <input type="date" name="fechaentrega" required="required" id="fechaen1">
         </p>
         <p>
         Elaboró
-		<INPUT style="width:25%" type=text name="elaboro">
+		<INPUT style="width:25%" type=text name="elaboro" required="required">
 		Recibí conforme
-		<INPUT style="width:25%" type=text name="conforme">
+		<INPUT style="width:25%" type=text name="conforme" required="required">
 		CC
-		<INPUT style="width:25%" type=text name="cc">
+		<INPUT style="width:25%" type=number name="cc" required="required" id="cc">
         </p>
         </div>
         
